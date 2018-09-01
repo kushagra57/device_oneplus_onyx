@@ -1,4 +1,4 @@
 subdirs = [
- //"camera-service/provider",
+    "camera-service/provider",
     "bluetooth/impl",
 ]
