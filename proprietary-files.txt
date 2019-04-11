@@ -305,3 +305,4 @@ etc/firmware/venus.mdt:vendor/firmware/venus.mdt
 # WiFi (from hammerhead)
 -lib/libwpa_qmi_eap_proxy.so:vendor/lib/libwpa_qmi_eap_proxy.so|6e41d63f973cbd20448f29f5b0b81780cc3f2694
 lib/libwcnss_qmi.so:vendor/lib/libwcnss_qmi.so|7aa2b3b41b0293316e06fd9ace837e7d8c3e7e7f
+
