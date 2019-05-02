@@ -319,3 +319,8 @@ PRODUCT_PACKAGES += \
     telephony-ext
 
 
+#extra packages
+PRODUCT_PACKAGES += \
+Launcher3 \
+Terminal
+
