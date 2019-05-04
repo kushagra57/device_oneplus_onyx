@@ -197,7 +197,8 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.onyx
+    android.hardware.light@2.0-impl \
+    lights.msm8974
 
 # Limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -235,7 +236,9 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.1-service.onyx
+    android.hardware.power@1.0-impl \
+    power.msm8974
+
 
 # RIL
 PRODUCT_PACKAGES += \
