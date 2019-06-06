@@ -21,5 +21,5 @@
 /system/vendor/bin/init.chargerled.sh                   u:object_r:charger_led_exec:s0
 
 # Camera HAL
-/system/vendor/bin/hw/android\.hardware\.camera\.provider@2\.4-service\.onyx       u:object_r:hal_camera_default_exec:s0
-
+#/system/vendor/bin/hw/android\.hardware\.camera\.provider@2\.4-service\.onyx       u:object_r:hal_camera_default_exec:s0
+/data/cam_socket.* u:object_r:camera_socket:s0

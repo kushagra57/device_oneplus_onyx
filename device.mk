@@ -16,6 +16,9 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+LAWNCHAIR_OPTOUT := true
+SOUNDPICKER_10 := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
 	$(LOCAL_PATH)/overlay \
@@ -114,8 +117,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl.onyx \
-    android.hardware.camera.provider@2.4-service.onyx \
+    android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
     camera.msm8974 \
     libshims_atomic \

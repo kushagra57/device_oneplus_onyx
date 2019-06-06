@@ -1,0 +1,2 @@
+allow blkid proc_filesystems:file { getattr open read };
+

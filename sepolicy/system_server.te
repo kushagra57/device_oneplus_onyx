@@ -9,3 +9,11 @@ r_dir_file(system_server, sysfs_usb_supply);
 
 # For OEM unlock switch
 allow system_server frp_block_device:blk_file rw_file_perms;
+
+allow system_server proc:file { getattr open read };
+
+allow system_server dalvikcache_data_file:file execute;
+
+allow system_server unlabeled:file unlink;
+
+
