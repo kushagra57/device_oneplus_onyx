@@ -9,4 +9,4 @@ allow charger_led sysfs_leds:dir search;
 allow charger_led sysfs_leds:file rw_file_perms;
 allow charger_led toolbox_exec:file { execute execute_no_trans getattr open read };
 
-allow charger_led self:capability dac_override;
+#allow charger_led self:capability dac_override;
