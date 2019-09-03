@@ -179,10 +179,10 @@ TARGET_RIL_VARIANT := caf
 TARGET_USE_OLD_MNC_FORMAT := true
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
+#include device/qcom/sepolicy-legacy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-    $(PLATFORM_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+ #   $(PLATFORM_PATH)/sepolicy
 
 # SHIMS
 TARGET_LD_SHIM_LIBS := \
