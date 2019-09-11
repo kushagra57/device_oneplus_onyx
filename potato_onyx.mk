@@ -46,6 +46,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := OnePlus/OnePlus/OnePlus:6.0.1/MMB29M/10281213:user/release-keys
 
+# Disable ADB authentication
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0
+
+
 # Unofficial build ID
 TARGET_UNOFFICIAL_BUILD_ID := Kushagra
 
