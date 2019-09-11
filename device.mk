@@ -75,10 +75,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/vendor/etc/permissions/android.hardware.wifi.direct.xml
 
 # ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
+#PRODUCT_PACKAGES += \
+#    AntHalService \
+#    com.dsi.ant.antradio_library \
+#    libantradio
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -147,8 +147,8 @@ PRODUCT_PACKAGES += \
     librmnetctl
 
 # Doze
-PRODUCT_PACKAGES += \
-    OnyxDoze
+#PRODUCT_PACKAGES += \
+#   OnyxDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -327,7 +327,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapmaxfree=8m
 
 # Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
+#$(call inherit-product, device/oppo/common/common.mk)
 
 # Telephony
 PRODUCT_PACKAGES += \
