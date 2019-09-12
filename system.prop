@@ -60,8 +60,6 @@ ro.telephony.default_network=9,9
 ro.use_data_netmgrd=true
 telephony.lteOnGsmDevice=1
 
-<<<<<<< HEAD
-=======
 # Audio
 mm.enable.sec.smoothstreaming=true
 af.fast_track_multiplier=1
@@ -91,7 +89,6 @@ persist.bluetooth.bluetooth_audio_hal.disabled=true
 camera2.portability.force_api=1
 persist.camera.cpp.duplication=false
 
->>>>>>> 202a84a9... onyx: Force disable bluetooth audio hal 2.0
 # Graphics
 debug.hwui.use_buffer_age=false
 persist.hwc.mdpcomp.enable=true
