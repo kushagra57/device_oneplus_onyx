@@ -1,5 +1,5 @@
-//soong_namespace {
-//}
+soong_namespace {
+}
 
 //subdirs = [
 //   "camera-service/provider",
