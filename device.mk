@@ -25,7 +25,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_BOARD_PLATFORM := msm8974
 
-#PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_USES_QCOM_HARDWARE := true
 
 
 # Overlays
@@ -105,9 +105,9 @@ PRODUCT_COPY_FILES += \
    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/vendor/etc/usb_audio_policy_configuration.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio@5.0-service \
+    android.hardware.audio.effect@5.0-impl \
     audio.a2dp.default \
     audio_policy.msm8974 \
     audio.primary.msm8974 \
@@ -129,8 +129,8 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.msm8974 \
     libshims_atomic \
-    libshims_camera \
-    libshims_camera_parameters \
+ #   libshims_camera \
+  #  libshims_camera_parameters \
     Snap
 
 # Camera configurations
@@ -217,8 +217,9 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl \
-    lights.msm8974
+     android.hardware.light@2.0-service.onyx
+#    android.hardware.light@2.0-impl \
+#    lights.msm8974
 
 # Limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -333,13 +334,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #$(call inherit-product, device/oppo/common/common.mk)
 
 # Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext \
-    ims-ext-common \
-    qti-telephony-common
+#PRODUCT_PACKAGES += \
+ #   telephony-ext \
+  #  ims-ext-common \
+   # qti-telephony-common
 
- PRODUCT_BOOT_JARS += \
-    telephony-ext
+ #PRODUCT_BOOT_JARS += \
+  #  telephony-ext
 
 
 #extra packages

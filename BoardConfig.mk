@@ -81,7 +81,8 @@ AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-USE_CUSTOM_AUDIO_POLICY := 0
+#USE_CUSTOM_AUDIO_POLICY := 0
+USE_LEGACY_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
@@ -90,8 +91,8 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+#TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+#TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/bin/mediaserver=22 \
     /system/vendor/bin/mm-qcamera-daemon=22
@@ -185,14 +186,14 @@ TARGET_USE_OLD_MNC_FORMAT := true
 # SELinux
 #include device/qcom/sepolicy-legacy/sepolicy.mk
 
-#BOARD_SEPOLICY_DIRS += \
- #   $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += \
+   $(PLATFORM_PATH)/sepolicy_tmp
 
 # SHIMS
 TARGET_LD_SHIM_LIBS := \
     /system/lib/libgui.so|libshims_sensors.so \
-    /system/vendor/lib/hw/camera.vendor.msm8974.so|libshims_camera.so \
-    /system/vendor/lib/hw/camera.vendor.msm8974.so|libshims_camera_parameters.so \
+  #  /system/vendor/lib/hw/camera.vendor.msm8974.so|libshims_camera.so \
+  #  /system/vendor/lib/hw/camera.vendor.msm8974.so|libshims_camera_parameters.so \
     /system/vendor/lib/libmmcamera2_stats_algorithm.so|libshims_atomic.so
 
 # Vendor security patch level
