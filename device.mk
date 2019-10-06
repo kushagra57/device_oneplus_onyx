@@ -105,9 +105,9 @@ PRODUCT_COPY_FILES += \
    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/vendor/etc/usb_audio_policy_configuration.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@5.0-impl \
-    android.hardware.audio@5.0-service \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@2.0-impl \
     audio.a2dp.default \
     audio_policy.msm8974 \
     audio.primary.msm8974 \
@@ -259,7 +259,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     power.msm8974
-
 
 # RIL
 PRODUCT_PACKAGES += \
