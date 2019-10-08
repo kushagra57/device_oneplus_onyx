@@ -184,9 +184,6 @@ TARGET_RIL_VARIANT := caf
 TARGET_USE_OLD_MNC_FORMAT := true
 
 # Power
-TARGET_HAS_LEGACY_POWER_STATS := true
-TARGET_HAS_NO_WLAN_STATS := true
-TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 
