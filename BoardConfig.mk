@@ -64,7 +64,7 @@ KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/linux-x86/arm/arm-linux-androidea
 MALLOC_SVELTE := true
 
 # ANT+
-#BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Assert
 TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
@@ -183,9 +183,8 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 TARGET_RIL_VARIANT := caf
 TARGET_USE_OLD_MNC_FORMAT := true
 
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
 
 # SELinux
 #include device/qcom/sepolicy-legacy/sepolicy.mk
