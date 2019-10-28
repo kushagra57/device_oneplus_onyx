@@ -16,7 +16,7 @@
 #
 
 # inherit from Oppo common
--include device/oppo/common/BoardConfigCommon.mk
+#-include device/oppo/common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/oneplus/onyx
 
@@ -30,6 +30,9 @@ TARGET_NO_RADIOIMAGE := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8974
+
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_PHONY_TARGETS := true
 
 # Architecture
 TARGET_ARCH := arm
@@ -83,7 +86,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Camera
-USE_DEVICE_SPECIFIC_CAMERA := true
+#USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/bin/cameraserver=22 \
     /system/bin/mediaserver=22 \
@@ -166,7 +169,7 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 # include device/qcom/sepolicy/sepolicy.mk
-# include device/qcom/sepolicy/legacy-sepolicy.mk
+ #include device/qcom/sepolicy/legacy-sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     $(PLATFORM_PATH)/sepolicy_tmp

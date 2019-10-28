@@ -16,6 +16,13 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
+PRODUCT_BOARD_PLATFORM := msm8974
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
 	$(LOCAL_PATH)/overlay \
@@ -207,8 +214,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.onyx
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sysfs
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -260,12 +267,12 @@ PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 # Touch features
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.onyx
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.touch@1.0-service.onyx
 
 # Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.trust@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -310,4 +317,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapmaxfree=8m
 
 # Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
+#$(call inherit-product, device/oppo/common/common.mk)
