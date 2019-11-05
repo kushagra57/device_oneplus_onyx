@@ -8,8 +8,10 @@ vendor/lib/libscve_stub.so
 
 # Bluetooth
 # bin/hci_qcomm_init (from bacon)
+bin/btnvtool:vendor/bin/btnvtool
 bin/hci_qcomm_init:vendor/bin/hci_qcomm_init|022d27e7c7cba3c9bbb0deadaa1834a620eeb407
 vendor/lib/libbtnv.so
+vendor/bin/libnbtool.so
 
 # Audio
 etc/firmware/tfa98xx.cnt:vendor/firmware/tfa98xx.cnt
