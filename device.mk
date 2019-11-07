@@ -78,6 +78,7 @@ PRODUCT_COPY_FILES += \
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-op.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-op.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
 
 # ANT+
@@ -135,6 +136,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
     camera.msm8974 \
+    libshims_camera \
+    libshims_camera_parameters \
     libshims_atomic \
     Snap
 

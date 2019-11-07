@@ -85,10 +85,12 @@ USE_XML_AUDIO_POLICY_CONF := 1
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
+BOARD_KERNEL_CMDLINE += androidboot.btmacaddr=00:00:00:00:00:00
 
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
+#TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/bin/cameraserver=22 \
     /system/bin/mediaserver=22 \
@@ -179,6 +181,8 @@ BOARD_SEPOLICY_DIRS += \
 # SHIMS
 TARGET_LD_SHIM_LIBS := \
     /system/lib/libgui.so|libshims_sensors.so \
+    /system/vendor/lib/hw/camera.vendor.msm8974.so|libshims_camera.so \
+    /system/vendor/lib/hw/camera.vendor.msm8974.so|libshims_camera_parameters.so \
     /system/vendor/lib/libmmcamera2_stats_algorithm.so|libshims_atomic.so
 
 # Vendor security patch level

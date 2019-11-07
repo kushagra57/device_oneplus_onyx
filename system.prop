@@ -55,7 +55,11 @@ ro.bluetooth.sap=false
 
 
 # Camera
+camera2.portability.force_api=1
 persist.camera.cpp.duplication=false
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+camera.shutter_sound.blacklist=com.oneplus.camera
 
 # Graphics
 debug.sf.hw=1
