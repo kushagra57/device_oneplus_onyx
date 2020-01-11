@@ -16,9 +16,12 @@
 #
 
 # inherit from Oppo common
--include device/oppo/common/BoardConfigCommon.mk
+#-include device/oppo/common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/oneplus/onyx
+
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_PHONY_TARGETS := true
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
@@ -52,6 +55,7 @@ BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := onyx_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/onyx
+BOARD_KERNEL_CMDLINE += androidboot.btmacaddr=00:00:00:00:00:00
 
 # Fixes Wifi-Mobile Data toggle issue
 MALLOC_SVELTE := true
@@ -153,6 +157,8 @@ TARGET_PROVIDES_KEYMASTER := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Power
+TARGET_HAS_LEGACY_POWER_STATS := true
+TARGET_HAS_NO_WLAN_STATS := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_USES_INTERACTION_BOOST := true
 

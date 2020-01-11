@@ -269,13 +269,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
-# Touch features
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.onyx
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -298,7 +291,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service.legacy \
+    android.hardware.wifi@1.0-service \
     dhcpcd.conf \
     libwpa_client \
     hostapd \
@@ -319,5 +312,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=2m \
     dalvik.vm.heapmaxfree=8m
 
+
+PRODUCT_BOARD_PLATFORM := msm8974
+
+PRODUCT_USES_QCOM_HARDWARE := true
+
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
+
 # Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
+#$(call inherit-product, device/oppo/common/common.mk)
