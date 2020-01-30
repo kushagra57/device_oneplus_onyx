@@ -1,0 +1,10 @@
+[
+  {
+    "repository":  "kernel_oneplus_onyx",
+    "target_path": "kernel/oneplus/onyx"
+  },
+  {
+    "repository" : "vendor_oneplus_onyx",
+    "target_path": "vendor/oneplus/onyx"
+  }
+]
