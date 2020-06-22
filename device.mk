@@ -68,7 +68,6 @@ PRODUCT_COPY_FILES += \
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-op.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-op.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
 
 # ANT+
@@ -126,14 +125,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl \
     camera.msm8974 \
+    libboringssl-compat \
     libshims_atomic \
-    libshims_camera \
-    libshims_camera_parameters \
     Snap
-
-# Camera configurations
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
 # Charger
 WITH_LINEAGE_CHARGER := false
@@ -149,7 +143,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    OnyxDoze
+   OnyxDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -241,6 +235,10 @@ PRODUCT_PACKAGES += \
     libnl_2 \
     libtinyxml
 
+# OnyxParts
+PRODUCT_PACKAGES += \
+    OnyxParts
+    
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
