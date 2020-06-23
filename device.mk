@@ -244,8 +244,8 @@ PRODUCT_PACKAGES += \
     libtinyxml
 
 # OnyxParts
-PRODUCT_PACKAGES += \
-    OnyxParts
+#PRODUCT_PACKAGES += \
+ #   OnyxParts
     
 # Power
 PRODUCT_PACKAGES += \
@@ -327,4 +327,4 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 
 # Inherit from oppo-common
-#$(call inherit-product, device/oppo/common/common.mk)
+$(call inherit-product, device/oppo/common/common.mk)
