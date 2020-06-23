@@ -24,6 +24,14 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
+LAWNCHAIR_OPTOUT := true
+SOUNDPICKER_10 := true
+
+#extra packages
+PRODUCT_PACKAGES += \
+Launcher3 \
+Terminal
+
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 1920
