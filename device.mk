@@ -140,7 +140,8 @@ PRODUCT_PACKAGES += \
 # Charger
 WITH_LINEAGE_CHARGER := false
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_images\
+    product_charger_res_images
 
 PRODUCT_PACKAGES += \
     init.chargerled.sh
