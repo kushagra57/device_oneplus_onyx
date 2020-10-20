@@ -261,6 +261,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libaudioclient_shim \
     libcnefeatureconfig \
     libxml2
 
