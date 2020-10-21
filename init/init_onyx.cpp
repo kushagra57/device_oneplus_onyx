@@ -32,11 +32,11 @@
 #include <android-base/properties.h>
 #include <android-base/logging.h>
 
-
+#include "property_service.h"
 #include "vendor_init.h"
 
 using android::base::GetProperty;
-using android::init::InitSetProperty;
+using android::init::property_set;
 
 void property_override(char const prop[], char const value[])
 {
@@ -62,24 +62,24 @@ void vendor_load_properties()
     rf_version = GetProperty("ro.boot.rf_version", "");
 
     // Init a dummy BT MAC address, will be overwritten later
-    InitSetProperty("ro.boot.btmacaddr", "00:00:00:00:00:00");
+    property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
 
     if (rf_version == "101") {
         /* China */
         property_override_dual("ro.product.model", "ro.vendor.product.model", "ONE E1001");
-        InitSetProperty("ro.rf_version", "TDD_FDD_Ch_All");
+        property_set("ro.rf_version", "TDD_FDD_Ch_All");
     } else if (rf_version == "102") {
         /* Asia/Europe */
         property_override_dual("ro.product.model", "ro.vendor.product.model", "ONE E1003");
-        InitSetProperty("ro.rf_version", "TDD_FDD_Eu");
+        property_set("ro.rf_version", "TDD_FDD_Eu");
     } else if (rf_version == "103"){
         /* America */
         property_override_dual("ro.product.model", "ro.vendor.product.model", "ONE E1005");
-        InitSetProperty("ro.rf_version", "TDD_FDD_Am");
+        property_set("ro.rf_version", "TDD_FDD_Am");
     } else if (rf_version == "107"){
         /* China CTCC Version */
         property_override_dual("ro.product.model", "ro.vendor.product.model", "ONE E1000");
-        InitSetProperty("ro.rf_version", "TDD_FDD_ALL_OPTR");
+        property_set("ro.rf_version", "TDD_FDD_ALL_OPTR");
     }
     device = GetProperty("ro.product.device", "");
     LOG(INFO) << "Found rf_version : " << rf_version.c_str() << " setting build properties for " << device.c_str() << " device\n";
