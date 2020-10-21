@@ -220,8 +220,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.image-dex2oat-threads=4
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sysfs
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -340,4 +340,4 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 
 # Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
+#$(call inherit-product, device/oppo/common/common.mk)

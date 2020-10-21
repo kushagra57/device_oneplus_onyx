@@ -16,12 +16,17 @@
 #
 
 # inherit from Oppo common
--include device/oppo/common/BoardConfigCommon.mk
+#-include device/oppo/common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/oneplus/onyx
 
 BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_PHONY_TARGETS := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
+#PRODUCT_BOARD_PLATFORM := msm8974
+
+#PRODUCT_USES_QCOM_HARDWARE := true
+
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
@@ -56,6 +61,10 @@ TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := onyx_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/onyx
 BOARD_KERNEL_CMDLINE += androidboot.btmacaddr=00:00:00:00:00:00
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
+#KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin
+#TARGET_KERNEL_GCC_COMPILE := true
+#TARGET_USE_LATEST_GCC := true
 
 # Fixes Wifi-Mobile Data toggle issue
 MALLOC_SVELTE := true
@@ -78,7 +87,7 @@ AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-USE_CUSTOM_AUDIO_POLICY := 1
+USE_CUSTOM_AUDIO_POLICY := 0
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
@@ -169,10 +178,10 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
+#include device/qcom/sepolicy-legacy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-    $(PLATFORM_PATH)/sepolicy
+    $(PLATFORM_PATH)/sepolicy-minimal
 
 # SHIMS
 TARGET_LD_SHIM_LIBS := \
