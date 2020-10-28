@@ -4,6 +4,11 @@
 
 ro.prj_name=15055
 
+# ADB 
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
 # RIL
 DEVICE_PROVISIONED=1
 persist.data.netmgrd.qos.enable=true
