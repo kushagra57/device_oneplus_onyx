@@ -79,10 +79,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
 
 # ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
+#PRODUCT_PACKAGES += \
+#    AntHalService \
+#    com.dsi.ant.antradio_library \
+#    libantradio
 
 # APEX
 PRODUCT_COPY_FILES += \
@@ -151,8 +151,8 @@ PRODUCT_PACKAGES += \
     librmnetctl
 
 # Doze
-PRODUCT_PACKAGES += \
-   OnyxDoze
+#PRODUCT_PACKAGES += \
+#   OnyxDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -256,8 +256,8 @@ PRODUCT_PACKAGES += \
  #   OnyxParts
     
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+#PRODUCT_PACKAGES += \
+#    android.hardware.power@1.2-service-qti
 
 # RIL
 PRODUCT_PACKAGES += \
