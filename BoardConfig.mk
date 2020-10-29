@@ -191,6 +191,7 @@ BOARD_SEPOLICY_DIRS += \
 
 # SHIMS
 TARGET_LD_SHIM_LIBS := \
+    /system/bin/cameraserver|libshims_unwind.so \
     /system/lib/libgui.so|libshims_sensors.so \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
     /system/vendor/lib/libril-qc-qmi-1.so|libaudioclient_shim.so \
