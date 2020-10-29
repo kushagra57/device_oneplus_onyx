@@ -20,8 +20,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 DEVICE_PACKAGE_OVERLAYS += \
 	$(LOCAL_PATH)/overlay 
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+#PRODUCT_ENFORCE_RRO_TARGETS := \
+#    framework-res
 
 LAWNCHAIR_OPTOUT := true
 SOUNDPICKER_10 := true
@@ -205,8 +205,8 @@ PRODUCT_PACKAGES += \
     
 # Healthd
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-impl \
-    android.hardware.health@2.0-service
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 
 # Lights
