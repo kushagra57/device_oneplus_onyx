@@ -256,8 +256,8 @@ PRODUCT_PACKAGES += \
  #   OnyxParts
     
 # Power
-#PRODUCT_PACKAGES += \
-#    android.hardware.power@1.2-service-qti
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti
 
 # RIL
 PRODUCT_PACKAGES += \
